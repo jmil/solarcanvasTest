@@ -21,12 +21,11 @@ function isWebGLSupported(): boolean {
 
 function App() {
   const [selectedPlanet, setSelectedPlanet] = useState<PlanetData | null>(null);
-  const [webglSupported, setWebglSupported] = useState<boolean>(false); // Force 2D mode for now
+  const [webglSupported, setWebglSupported] = useState<boolean>(true);
   const [canvasError, setCanvasError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Temporarily disabled to test 2D fallback
-    // setWebglSupported(isWebGLSupported());
+    setWebglSupported(isWebGLSupported());
   }, []);
 
   // Error handler for Canvas
