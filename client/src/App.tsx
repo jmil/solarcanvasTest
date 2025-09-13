@@ -49,11 +49,20 @@ function App() {
         
         {/* Instructions */}
         <div className="absolute top-4 left-4 bg-black bg-opacity-70 text-white p-4 rounded-lg max-w-xs">
-          <h3 className="text-lg font-bold mb-2">Solar System Explorer</h3>
+          <div className="flex items-center mb-2">
+            <h3 className="text-lg font-bold">Solar System Explorer</h3>
+            <div className="ml-2 flex items-center">
+              {(!webglSupported || canvasError) ? (
+                <span className="text-blue-400 text-sm" title="2D Mode">🖼️</span>
+              ) : (
+                <span className="text-green-400 text-sm" title="3D Mode">🎮</span>
+              )}
+            </div>
+          </div>
           <p className="text-sm mb-2">Click on planets to learn more about them</p>
           {(!webglSupported || canvasError) && (
             <p className="text-xs text-yellow-300 mt-2">
-              Running in 2D mode - WebGL not available
+              2D Mode - Accessibility Optimized
             </p>
           )}
         </div>
@@ -106,7 +115,12 @@ function App() {
       
       {/* Instructions */}
       <div className="absolute top-4 left-4 bg-black bg-opacity-70 text-white p-4 rounded-lg max-w-xs">
-        <h3 className="text-lg font-bold mb-2">Solar System Explorer</h3>
+        <div className="flex items-center mb-2">
+          <h3 className="text-lg font-bold">Solar System Explorer</h3>
+          <div className="ml-2 flex items-center">
+            <span className="text-green-400 text-sm" title="3D Mode">🎮</span>
+          </div>
+        </div>
         <p className="text-sm mb-2">Click on planets to learn more about them</p>
         <p className="text-xs text-gray-300">
           Use mouse to rotate • Scroll to zoom
