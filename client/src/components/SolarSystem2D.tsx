@@ -69,7 +69,7 @@ export function SolarSystem2D({ onPlanetClick }: SolarSystem2DProps) {
               boxShadow: '0 0 30px #FDB813, 0 0 60px #FDB813',
             }}
           >
-            <div className="absolute inset-0 rounded-full bg-gradient-radial from-yellow-200 to-yellow-600" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-yellow-200 to-yellow-600" />
           </div>
 
           {/* Planets */}
