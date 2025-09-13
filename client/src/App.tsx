@@ -95,7 +95,7 @@ function App() {
         }}
         onError={handleCanvasError}
       >
-        <color attach="background" args={["#000011"]} />
+        <color attach="background" args={["#1a0a2e"]} />
         
         {/* Lighting */}
         <ambientLight intensity={0.1} />

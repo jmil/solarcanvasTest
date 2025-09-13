@@ -2,7 +2,6 @@ import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { Planet } from "./Planet";
-import { StarField } from "./StarField";
 import { planetsData, type PlanetData } from "../data/planetData";
 
 interface SolarSystemProps {
@@ -21,8 +20,16 @@ export function SolarSystem({ onPlanetClick }: SolarSystemProps) {
 
   return (
     <group ref={groupRef}>
-      {/* Star field background */}
-      <StarField />
+      {/* Purple space atmosphere sphere */}
+      <mesh position={[0, 0, 0]}>
+        <sphereGeometry args={[500, 32, 32]} />
+        <meshBasicMaterial 
+          color="#2A0845" 
+          side={THREE.BackSide}
+          transparent
+          opacity={0.3}
+        />
+      </mesh>
       
       {/* Sun */}
       <mesh position={[0, 0, 0]}>

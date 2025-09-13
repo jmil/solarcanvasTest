@@ -18,22 +18,6 @@ export function SolarSystem2D({ onPlanetClick }: SolarSystem2DProps) {
 
   return (
     <div className="w-full h-full relative bg-gradient-to-b from-black via-purple-900 to-black overflow-hidden">
-      {/* Star field - static to avoid seizure risk */}
-      <div className="absolute inset-0">
-        {Array.from({ length: 200 }).map((_, i) => (
-          <div
-            key={i}
-            className="absolute bg-white rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              width: `${Math.random() * 1.5 + 0.5}px`,
-              height: `${Math.random() * 1.5 + 0.5}px`,
-              opacity: Math.random() * 0.7 + 0.3,
-            }}
-          />
-        ))}
-      </div>
 
       {/* Solar system container */}
       <div className="absolute inset-0 flex items-center justify-center">
